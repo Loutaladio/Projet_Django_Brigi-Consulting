@@ -4,7 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Brigi+ Consulting, agence de voyages sur mesure.">
+    <meta name="description" content="Brigi+ Consulting, agence de voyages sur mesure, développé par Loutaladio Arcel — DG Club.">
+    <meta name="author" content="Loutaladio Arcel — DG Club">
     <title>{% block title %}Brigi+ Consulting{% endblock %}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,11 +35,15 @@
             <div>
                 <a class="brand brand-footer" href="{% url 'voyages:accueil' %}"><span class="brand-mark">B<span>+</span></span><span class="brand-name">Brigi+ <small>Consulting</small></span></a>
                 <p class="footer-intro">Des voyages qui ont une histoire<br>à raconter.</p>
+                <div class="creator-credit">
+                    <img src="{% static 'images/dg-club-logo.webp' %}" alt="DG Club">
+                    <span>Développé par <a href="https://loutaladiodanickarcel.vercel.app/" target="_blank" rel="noopener">Loutaladio Arcel · DG Club ↗</a></span>
+                </div>
             </div>
             <div><h3>Explorer</h3><a href="{% url 'voyages:destinations' %}">Nos destinations</a><a href="{% url 'voyages:a_propos' %}">Notre démarche</a></div>
             <div><h3>Échanger</h3><a href="{% url 'voyages:contact' %}">Prendre contact</a><p>bonjour@brigi-consulting.fr</p></div>
         </div>
-        <div class="container footer-bottom"><span>© 2024 Brigi+ Consulting</span><span>L'échec est aussi une bénédiction.</span></div>
+        <div class="container footer-bottom"><span>© 2024 Brigi+ Consulting</span><span>Conçu avec soin par DG Club · L'échec est aussi une bénédiction.</span></div>
     </footer>
 </body>
 </html>

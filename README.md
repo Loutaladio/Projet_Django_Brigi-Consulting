@@ -22,7 +22,8 @@ Puis ouvrir `http://127.0.0.1:8000/`.
 - `voyages/views.py` applique la logique MVT : filtrage des données simulées, préparation des contextes, rendu des pages et levée de `Http404`.
 - `voyages/donnees.py` remplace une base de données par une liste de dictionnaires contenant 5 offres complètes.
 - `templates/base.html` est le template parent. Toutes les pages l'étendent avec `{% extends %}` et utilisent `{% url %}` pour les liens.
-- `static/css/style.css` contient le design responsive ; `static/images/` contient les illustrations des destinations.
+- `static/css/style.css` contient le design responsive ; `static/images/real/` contient les photos réelles des destinations.
+- La marque du développeur reste volontairement discrète : un petit crédit DG Club est placé dans le pied de page, sans détourner l'attention de l'agence de voyages.
 
 ## Déploiement PythonAnywhere
 
@@ -48,9 +49,13 @@ Puis ouvrir `http://127.0.0.1:8000/`.
    ```
 7. Dans **Web > Static files**, ajouter :
    - URL : `/static/`
-   - Directory : `/home/VOTRE_NOM/projet-django/static`
+   - Directory : `/home/VOTRE_NOM/projet-django/staticfiles`
 8. Recharger l'application. Aucun `migrate` n'est nécessaire puisque le projet n'utilise aucune base de données.
 
 ## Points à présenter à l'enseignant
 
 Le projet démontre la séparation MVT : les vues ne contiennent pas de HTML, les templates ne contiennent pas de logique métier lourde et les données sont isolées dans un module dédié. Les liens sont tous construits avec des noms d'URL Django ; une URL inconnue déclenche une page 404 ; l'héritage de `base.html` évite de dupliquer la navigation et le pied de page.
+
+## Identité du développeur et crédits visuels
+
+Le crédit discret « Développé par Loutaladio Arcel · DG Club » utilise le logo fourni par le créateur. Les photographies de destinations ont été sélectionnées depuis des résultats Unsplash et optimisées localement pour le site. Le portrait personnel reçu n'est pas affiché afin de préserver le positionnement éditorial de Brigi+ Consulting.
