@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{ destination.titre }} — Brigi+ Consulting{% endblock %}
+{% block content %}
+<section class="detail-hero"><div class="detail-image"><img src="{% static destination.image %}" alt="Paysage de {{ destination.titre }}"><div class="detail-overlay"></div><div class="container detail-title"><a class="back-link" href="{% url 'voyages:destinations' %}">← Retour aux destinations</a><p class="eyebrow">{{ destination.pays }}</p><h1>{{ destination.titre }}</h1></div></div></section>
+<section class="section detail-content"><div class="container detail-grid"><div><p class="eyebrow eyebrow-dark">L'expérience</p><h2>{{ destination.accroche }}</h2><p class="large-copy">{{ destination.description }}</p></div><aside class="detail-card"><div class="detail-price"><span>À partir de</span><strong>{{ destination.prix }} €</strong><small>par personne</small></div><div class="detail-facts"><div><span>Durée</span><strong>{{ destination.duree }}</strong></div><div><span>Destination</span><strong>{{ destination.pays }}</strong></div></div><a class="button button-dark" href="{% url 'voyages:contact' %}">Imaginer ce voyage <span>↗</span></a></aside></div></section>
+<section class="section included"><div class="container"><p class="eyebrow eyebrow-dark">Ce qui est inclus</p><div class="included-grid">{% for item in destination.inclus %}<div class="included-item"><span>✦</span>{{ item }}</div>{% endfor %}</div></div></section>
+{% endblock %}

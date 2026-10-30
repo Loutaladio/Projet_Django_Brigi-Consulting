@@ -1,0 +1,44 @@
+{% load static %}
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Brigi+ Consulting, agence de voyages sur mesure.">
+    <title>{% block title %}Brigi+ Consulting{% endblock %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container nav-wrap">
+            <a class="brand" href="{% url 'voyages:accueil' %}" aria-label="Brigi+ Consulting, accueil">
+                <span class="brand-mark">B<span>+</span></span>
+                <span class="brand-name">Brigi+ <small>Consulting</small></span>
+            </a>
+            <nav class="main-nav" aria-label="Navigation principale">
+                <a href="{% url 'voyages:accueil' %}">Accueil</a>
+                <a href="{% url 'voyages:destinations' %}">Destinations</a>
+                <a href="{% url 'voyages:a_propos' %}">À propos</a>
+                <a class="nav-cta" href="{% url 'voyages:contact' %}">Parlons de votre projet <span>↗</span></a>
+            </nav>
+        </div>
+    </header>
+
+    <main>{% block content %}{% endblock %}</main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <a class="brand brand-footer" href="{% url 'voyages:accueil' %}"><span class="brand-mark">B<span>+</span></span><span class="brand-name">Brigi+ <small>Consulting</small></span></a>
+                <p class="footer-intro">Des voyages qui ont une histoire<br>à raconter.</p>
+            </div>
+            <div><h3>Explorer</h3><a href="{% url 'voyages:destinations' %}">Nos destinations</a><a href="{% url 'voyages:a_propos' %}">Notre démarche</a></div>
+            <div><h3>Échanger</h3><a href="{% url 'voyages:contact' %}">Prendre contact</a><p>bonjour@brigi-consulting.fr</p></div>
+        </div>
+        <div class="container footer-bottom"><span>© 2024 Brigi+ Consulting</span><span>L'échec est aussi une bénédiction.</span></div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,3 @@
+{% extends 'base.html' %}
+{% block title %}Destination introuvable — Brigi+ Consulting{% endblock %}
+{% block content %}<section class="error-page"><div class="container"><span class="error-number">404</span><h1>Cette escale<br><em>n'existe pas.</em></h1><p>Cette destination a peut-être changé d'itinéraire. Retournons explorer le catalogue.</p><a class="button button-dark" href="{% url 'voyages:destinations' %}">Voir les destinations <span>↗</span></a></div></section>{% endblock %}

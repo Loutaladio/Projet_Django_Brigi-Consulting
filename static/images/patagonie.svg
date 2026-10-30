@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" role="img" aria-label="Illustration de Patagonie">
+<defs><linearGradient id="g" x2="0" y2="1"><stop stop-color="#7895a3"/><stop offset="1" stop-color="#f1c48b"/></linearGradient></defs>
+<rect width="900" height="620" fill="url(#g)"/><circle cx="650" cy="185" r="88" fill="#dce8e4" opacity=".92"/>
+<path d="M0 440L180 285l110 90 145-205 180 210 115-105 170 165v180H0z" fill="#263e4b" opacity=".88"/>
+<path d="M0 505l180-116 140 65 110-101 175 125 110-67 185 99v110H0z" fill="#243b38" opacity=".72"/>
+<path d="M0 555c170-50 290 28 450-12 167-42 274 22 450-15v92H0z" fill="#17312f" opacity=".75"/>
+<g fill="#fff" opacity=".8"><circle cx="88" cy="110" r="3"/><circle cx="115" cy="135" r="2"/><circle cx="220" cy="87" r="2"/></g>
+<text x="42" y="570" fill="#fff" font-family="Arial,sans-serif" font-size="17" letter-spacing="5" opacity=".8">PATAGONIE</text></svg>

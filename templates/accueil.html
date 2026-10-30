@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Voyager autrement — Brigi+ Consulting{% endblock %}
+{% block content %}
+<section class="hero">
+    <div class="hero-orbit"></div>
+    <div class="container hero-grid">
+        <div class="hero-copy"><p class="eyebrow">Agence de voyages sur mesure <span>✦</span></p><h1>Le monde est vaste.<br><em>Votre histoire</em> aussi.</h1><p class="hero-lead">Nous imaginons des voyages sensibles, singuliers et profondément humains — pour découvrir bien plus qu'une destination.</p><a class="button button-light" href="{% url 'voyages:destinations' %}">Explorer nos voyages <span>↗</span></a></div>
+        <div class="hero-art" aria-label="Illustration d'un voyage au coucher du soleil"><div class="sun"></div><div class="mountain mountain-back"></div><div class="mountain mountain-front"></div><div class="hero-note"><span>01</span><strong>Voyagez<br>avec intention.</strong></div></div>
+    </div>
+    <div class="container hero-meta"><span>Kinshasa · Paris · Le monde</span><span>Scroll pour découvrir ↓</span></div>
+</section>
+<section class="section section-featured"><div class="container"><div class="section-heading"><div><p class="eyebrow eyebrow-dark">Nos coups de cœur</p><h2>Des ailleurs qui<br><em>restent en vous.</em></h2></div><a class="text-link" href="{% url 'voyages:destinations' %}">Voir toutes les destinations <span>↗</span></a></div><div class="destination-grid">{% for destination in coups_de_coeur %}<article class="destination-card"><a href="{% url 'voyages:detail_destination' destination.id %}"><div class="card-image"><img src="{% static destination.image %}" alt="Paysage de {{ destination.titre }}"><span class="card-arrow">↗</span>{% if destination.coup_de_coeur %}<span class="badge">Coup de cœur</span>{% endif %}</div><div class="card-body"><div class="card-kicker"><span>{{ destination.pays }}</span><span>{{ destination.duree }}</span></div><h3>{{ destination.titre }}</h3><p>{{ destination.accroche }}</p><strong>À partir de {{ destination.prix }} €</strong></div></a></article>{% endfor %}</div></div></section>
+<section class="manifesto"><div class="container manifesto-grid"><p class="eyebrow">Notre promesse</p><div><h2>Le luxe, c'est<br><em>le temps de vivre.</em></h2><p>Un itinéraire pensé avec soin, des rencontres vraies et la liberté de ralentir. Nous créons chaque voyage comme une pièce unique, à votre image.</p><a class="text-link text-link-light" href="{% url 'voyages:a_propos' %}">Découvrir notre approche <span>↗</span></a></div></div></section>
+{% endblock %}
