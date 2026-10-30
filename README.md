@@ -58,4 +58,4 @@ Le projet démontre la séparation MVT : les vues ne contiennent pas de HTML, le
 
 ## Identité du développeur et crédits visuels
 
-Le crédit discret « Développé par Loutaladio Danick Arcel · DG Club » utilise le logo fourni par le créateur. Les photographies de destinations ont été sélectionnées depuis des résultats Unsplash et optimisées localement pour le site. Le portrait personnel reçu n'est pas affiché afin de préserver le positionnement éditorial de Brigi+ Consulting.
+Le footer identifie clairement le créateur : « Développé par Loutaladio Danick Arcel · DG Club — Digital Génération », avec un lien vers le [site officiel de DG Club](https://dgclubofficiel.vercel.app/). Les photographies de destinations ont été sélectionnées depuis des résultats Unsplash et optimisées localement pour le site. Le portrait personnel reçu n'est pas affiché afin de préserver le positionnement éditorial de Brigi+ Consulting.
