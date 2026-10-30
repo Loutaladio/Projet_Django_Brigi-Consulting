@@ -7,7 +7,7 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "brigi-consulting-development-key"
-DEBUG = True
+DEBUG = False
 ALLOWED_HOSTS = ["*"]
 
 INSTALLED_APPS = [
